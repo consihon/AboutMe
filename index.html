@@ -8,9 +8,13 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>"All About Me"</h1>
-    <h2>"A webpage about Connor, by Connor"</h2>
+    <h1>All About Me</h1>
+    <h2>A webpage about Connor, by Connor</h2>
     <h3>Some History</h3>
+    <ul>
+        <li>I was born in tacoma washington and quickly moved to Renton, with my loving mother and father.</li>
+        <li>when I was three years old, my younger brother Kyle was born and my family moved to Sammamish Washington.</li>
+    </ul>
     <h3></h3>
 
 
@@ -18,17 +22,59 @@
 </body>
 
 
-<!-- <script>
-    var userName = prompt ('Welcome to my site! What\'s your name?');
-    if(!userName){    
+<script>
+    var score;
+    var userName;
+    var mountains;
+    var sister;
+    var dog;
+    var green;
+    
+    userName = prompt ('Welcome to my site! What\'s your name?');
+    while(!userName){    
         userName = prompt ('I need your name before we can move on.');
-    }else{
-        alert("Hi,"+userName+" Thanks for visiting my webpage! How about I ask you some questions about me!");   
     }
-    var mountains = prompt ("Do I like to ski?");
+    alert("Hi,"+userName+" Thanks for visiting my webpage! How about I ask you some questions about me!");   
+    console.log("USERNAME: "+userName);
 
-    if(mountains ===yes){
-        alert ("Nice job, I love Skiing");
+    while (!mountains){
+        mountains = prompt("Do I like to ski?(y/n)");
+        if (!mountains){
+            alert("please answer the question with a y/n response");
+        }
     }
-</script> -->
+    if(mountains.toLowerCase().charAt(0) ==="y"){
+        alert ("Nice job, I love Skiing");
+        score++;
+    }else{
+        alert("Actually, I love to ski. I have been riding since I was 3 years old.");
+    }
+
+
+    while (!sushi){
+        sushi = prompt("Is sushi my favorite food? (y/n)");
+        if (!sushi){
+            alert("please answer the question with a y/n response");
+        }
+    } if(sushi.toLowerCase().charAt(0) ==="y"){
+        alert ("Nice job, I love sushi");
+        score++;
+    }else{
+        alert("Actually, I love sushi, if you dont, I'm sorry.");
+    }
+
+
+    while (!sister){
+         = prompt("?(y/n)");
+        if (!){
+            alert("please answer the question with a y/n response");
+        }
+    } if(sushi.toLowerCase().charAt(0) ==="y"){
+        alert ("Nice job, ");
+        score++;
+    }else{
+        alert("Actually,");
+    }
+
+</script>
 </html>

@@ -10,10 +10,14 @@
 <body>
     <h1>All About Me</h1>
     <h2>A webpage about Connor, by Connor</h2>
-    <h3>Some History</h3>
+    <h3>Questions:</h3>
     <ul>
-        <li>I was born in tacoma washington and quickly moved to Renton, with my loving mother and father.</li>
-        <li>when I was three years old, my younger brother Kyle was born and my family moved to Sammamish Washington.</li>
+        <li>Do I like to ski?</li>
+        <li>What is my favorite food?</li>
+        <li>Do I have a sister?</li>
+        <li>Am I a cat person?</li>
+        <li>Is orange my favorite color?</li>
+        <li></li>
     </ul>
     <h3></h3>
 
@@ -30,6 +34,7 @@
     var mySister;
     var dog;
     var green;
+    var response;
     
     userName = prompt ('Welcome to my site! What\'s your name?');
     while(!userName){    
@@ -81,9 +86,53 @@
     }
     console.log(userName+" has answered "+score+" questions correctly.");
 
+    console.log('running cat question');
+    while (!dog){
+         dog= prompt("Am I a cat person?(y/n)");
+        if (!dog){
+            alert("please answer the question with a y/n response");
+        }
+    } if(dog.toLowerCase().charAt(0) ==="y"){
+        alert ("I'm defintely a dog person, i think cats are cool too, though.");
+    }else{
+        alert("This is true, I'm definitely a dog person.");
+        score++;
+    }
+    console.log(userName+" has answered "+score+" questions correctly.");
+
+    console.log('running color question');
+    while (!green){
+         green= prompt("is my favorite color orange?(y/n)");
+        if (!green){
+            alert("please answer the question with a y/n response");
+        }
+    } if(green.toLowerCase().charAt(0) ==="y"){
+        alert ("I like oranges, but orangisnt my favorite color.");
+    }else{
+        alert("You're right! my favorite color is green.");
+        score++;
+    }
+    console.log(userName+" has answered "+score+" questions correctly.");
+
+    console.log(userName+" has completed the survey and answered "+score+" questions correctly.");
+    
+    if(score<3){
+        response="Maybe we should get to know eachother better";
+    }else if(score===3){
+        response="Im glad I could teach you a few things about me."
+    }else{
+        response="great job!"
+    }
+
+    
+    alert("you have answered "+score+" questions correctly, "+response);
+
+
 
 
 
 
 </script>
+
+
 </html>

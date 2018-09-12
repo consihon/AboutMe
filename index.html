@@ -27,6 +27,7 @@
 
 
 <script>
+    //declares all variables at top of script to ensure scope.
     var score=0;
     var userName;
     var mountains;
@@ -36,6 +37,7 @@
     var green;
     var response;
     
+    //asks for username and if they return a null reminds the user a valid response is necessary and re prompts.
     userName = prompt ('Welcome to my site! What\'s your name?');
     while(!userName){    
         userName = prompt ('I need your name before we can move on.');
@@ -43,6 +45,9 @@
     alert("Hi,"+userName+" Thanks for visiting my webpage! How about I ask you some questions about me!");   
     console.log("USERNAME: "+userName);
     
+    //while the user has not yet answered a question, we continue to remind them they need to respond and re prompt.
+    //same formula used throughout script, would be more beneficial to create a question asking method that takes in 
+        //each question and response as a parameter and reuses the same framework until no more questions are left.
     console.log('running skiing question')
     while(!mountains){
         mountains = prompt("Do I like to ski?(y/n)");
@@ -116,6 +121,8 @@
 
     console.log(userName+" has completed the survey and answered "+score+" questions correctly.");
     
+
+    //checks to see how many questions the user answered correctly and generates a correct response.
     if(score<3){
         response="Maybe we should get to know eachother better";
     }else if(score===3){

@@ -123,6 +123,7 @@ var numberGame = new function (){
       console.log(userName+'guessed correctly.');
     }else if (guessAttempts===4){
       alert('you didnt guess correctly, the correct answer was '+newRandomNumber);
+      break;
     }else if (numGuess<newRandomNumber){
       alert('higher.');
     }else if(numGuess>newRandomNumber){
